@@ -13,8 +13,8 @@ export default function HomePage() {
         const data = await resp.json()
         setMovies(data)
       } catch (err) {
-        console.log("Something went wrong", err)
-        setErrorMessage("Kunde inte hämta filmer. Testa ladda om sidan.")
+        console.log("Något gick fel", err)
+        setErrorMessage("Filmerna verkar ha rymt. Testa att ladda om sidan.")
       } finally {
         setIsLoading(false)
       }
@@ -23,15 +23,17 @@ export default function HomePage() {
     getMovies()
   }, [])
 
-  if (isLoading) return <p>Laddar filmer...</p>
+  if (isLoading) return <p>Labradoren hämtar filmerna.</p>
   if (errorMessage) return <p style={{ color: "red" }}>{errorMessage}</p>
 
   return (
     <main>
       <h1 className="text-3xl font-bold">Bettys Biograf</h1>
+      <div className="flex gap-4 overflow-auto">
       {movies.map(movie => (
         <MovieCard key={movie._id} movie={movie} />
       ))}
+      </div>
     </main>
   )
 }
