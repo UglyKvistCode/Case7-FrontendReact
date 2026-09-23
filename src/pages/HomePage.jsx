@@ -33,7 +33,7 @@ export default function HomePage() {
     </header>
     <main className="bg-gray-950 text-white p-12">
       <h1 className="text-3xl font-bold mb-6 text-center text-yellow-500">På bio just nu:</h1>
-      <div className="flex gap-6 flex-wrap text-white p-8 justify-center w-2/3 m-auto">
+      <div className="flex gap-6 flex-wrap text-white p-8 justify-center m-auto">
       {movies.map(movie => (
         <MovieCard key={movie._id} movie={movie} />
       ))}
