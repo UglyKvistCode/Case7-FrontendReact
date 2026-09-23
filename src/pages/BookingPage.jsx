@@ -36,9 +36,11 @@ export default function BookingPage({ setConfirmedBooking }) {
   if (!show) return <p>Föreställningen hittades inte.</p>
 
   return (
-    <main>
+    <div className="bg-gray-900 text-white">
+    <main> 
       <h1 className="font-bold">Boka biljett</h1>
       <BookingForm show={show} onBookingComplete={handleBookingComplete} />
     </main>
+    </div>
   )
 }

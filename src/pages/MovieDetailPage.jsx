@@ -29,7 +29,7 @@ export default function MovieDetailPage() {
   if (errorMessage) return <p style={{ color: "red" }}>{errorMessage}</p>
 
   return (
-    <main>
+    <main className="bg-gray-950 text-white">
       <h1 className="text-2xl font-bold">Föreställningar</h1>
       <p><Link to="/" className="text-blue-500 underline">Tillbaka till alla filmer</Link></p>
       {shows.length > 0 ? (

@@ -39,7 +39,7 @@ export default function BookingForm({ show, onBookingComplete }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 ">
       <label>
         Namn:
         <input
@@ -47,16 +47,18 @@ export default function BookingForm({ show, onBookingComplete }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="border border-stone-800 rounded-2xl"
+          className="border border-gray-700 rounded-3xl"
         />
       </label>
 
       <label>
         Välj liggplats:
-        <select value={selectedSeat} onChange={(e) => setSelectedSeat(e.target.value)}>
+        <select value={selectedSeat} 
+        onChange={(e) => setSelectedSeat(e.target.value)}
+        className="border border-gray-700 rounded-3xl px-3 py-1 ml-2">
           <option value="">-- Välj --</option>
           {show.availableSeats.map(seat => (
-            <option key={seat} value={seat}>{seat}</option>
+            <option key={seat} value={seat}className="bg-gray-800 text-white">{seat}</option>
           ))}
         </select>
       </label>
@@ -68,13 +70,14 @@ export default function BookingForm({ show, onBookingComplete }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="border border-stone-800 rounded-2xl"
+          className="border border-gray-700 rounded-3xl"
         />
       </label>
 
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
 
-      <button type="submit" disabled={isSubmitting}>
+      <button type="submit" disabled={isSubmitting}
+      className="border border-gray-700 rounded-3xl px-4 py-2 hover:bg-gray-700 hover:text-white transition disabled:opacity-50 self-start">
         {isSubmitting ? "Vallar in din bokning..." : "Boka en liggplats"}
       </button>
     </form>

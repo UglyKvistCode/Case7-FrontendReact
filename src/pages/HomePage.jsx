@@ -27,9 +27,9 @@ export default function HomePage() {
   if (errorMessage) return <p style={{ color: "red" }}>{errorMessage}</p>
 
   return (
-    <main>
-      <h1 className="text-3xl font-bold">Bettys Biograf</h1>
-      <div className="flex gap-4 overflow-auto">
+    <main className="bg-gray-950 text-white">
+      <h1 className="text-3xl font-bold mb-6 text-center text-yellow-500">På bio just nu:</h1>
+      <div className="flex gap-6 overflow-x-auto text-white p-8 justify-center">
       {movies.map(movie => (
         <MovieCard key={movie._id} movie={movie} />
       ))}

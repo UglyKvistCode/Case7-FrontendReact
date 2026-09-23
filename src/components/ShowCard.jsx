@@ -9,7 +9,7 @@ export default function ShowCard({ show }) {
       <p>Sal: {show.roomNumber}</p>
       <p>Pris: {show.pricePerSeat} kr</p>
       <p>Lediga platser: {show.availableSeats?.length ?? "okänt"}</p>
-      <Link to={`/book/${show._id}`} >
+      <Link to={`/book/${show._id}`} className="inline-block border border-gray-700 rounded-lg px-4 py-2 hover:bg-gray-700 hover:text-white transition">
         Boka biljett
       </Link>
     </div>
