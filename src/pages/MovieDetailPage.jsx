@@ -14,6 +14,7 @@ export default function MovieDetailPage() {
         const resp = await fetch(`https://cinema-api.henrybergstrom.com/api/v1/shows/movie/${movieId}`)
         const data = await resp.json()
         setShows(data)
+        console.log(data)
       } catch (err) {
         console.log("Något gick fel", err)
         setErrorMessage("Kunde inte hämta föreställningar. Testa ladda om sidan.")
@@ -30,13 +31,15 @@ export default function MovieDetailPage() {
 
   return (
     <main className="bg-gray-950 text-white">
-      <h1 className="text-2xl font-bold">Föreställningar</h1>
+      <h1 className="text-2xl font-bold">Föreställningar för</h1>
       <p><Link to="/" className="text-blue-500 underline">Tillbaka till alla filmer</Link></p>
+      <div className="flex gap-4">
       {shows.length > 0 ? (
         shows.map(show => <ShowCard key={show._id} show={show} />)
       ) : (
         <p>Inga föreställningar hittades för den här filmen.</p>
       )}
+      </div>
     </main>
   )
 }

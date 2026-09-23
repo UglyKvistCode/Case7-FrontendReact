@@ -5,6 +5,7 @@ export default function ShowCard({ show }) {
 
   return (
     <div className="border rounded p-4">
+      <h2>{show.movie.title}</h2>
       <p>Speltid: {startTime}</p>
       <p>Sal: {show.roomNumber}</p>
       <p>Pris: {show.pricePerSeat} kr</p>
