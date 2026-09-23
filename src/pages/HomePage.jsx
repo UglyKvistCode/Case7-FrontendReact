@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import MovieCard from "../components/MovieCard"
+import CurtainReveal from "../components/CurtainReveal"
 
 export default function HomePage() {
   const [movies, setMovies] = useState([])
@@ -28,9 +29,11 @@ export default function HomePage() {
 
   return (
     <>
-    <header>
-      <img className="w-full h-[480px] object-cover" src="https://cdn.publisher-live.etc.nu/swp/uc3g8l/media/20211110161156_0d42f06dcc2c7c5cd828f4d6f516247712c0024b00a31fa3409456aabf33cfda.jpg"/>
-    </header>
+<h1 className="text-4xl font-bold text-yellow-500 text-center py-6 bg-gray-950">
+  Bettys HundBiograf
+</h1>
+
+<CurtainReveal />
     <main className="bg-gray-950 text-white p-12">
       <h1 className="text-3xl font-bold mb-6 text-center text-yellow-500">På bio just nu:</h1>
       <div className="flex gap-6 flex-wrap text-white p-8 justify-center m-auto">
@@ -38,6 +41,18 @@ export default function HomePage() {
         <MovieCard key={movie._id} movie={movie} />
       ))}
       </div>
+      <section className="bg-gray-900 text-white p-8 mt-8 rounded-lg text-center">
+  <h2 className="text-2xl font-bold text-yellow-500 mb-4">I varje liggplats ingår:</h2>
+  <div className="flex flex-wrap justify-center gap-6 text-lg">
+    <p>🍿 Pupcorn</p>
+    <p>🛏️ Mysig filt</p>
+    <p>🍺 Hundöl</p>
+  </div>
+  <p className="mt-6 text-gray-300">
+    Småhundar och valpar kan be om en extra kudde. <br />
+    Extra sköna kuddar finns för våra äldre gäster.
+  </p>
+</section>
     </main>
     </>
   )

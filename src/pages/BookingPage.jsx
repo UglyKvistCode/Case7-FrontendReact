@@ -31,16 +31,18 @@ export default function BookingPage({ setConfirmedBooking }) {
     navigate("/confirm")
   }
 
-  if (isLoading) return <p>Laddar...</p>
-  if (errorMessage) return <p style={{ color: "red" }}>{errorMessage}</p>
-  if (!show) return <p>Föreställningen hittades inte.</p>
+  if (isLoading) return <p className="text-center text-white bg-gray-950 min-h-screen pt-12">Laddar...</p>
+  if (errorMessage) return <p className="text-center text-red-500 bg-gray-950 min-h-screen pt-12">{errorMessage}</p>
+  if (!show) return <p className="text-center text-white bg-gray-950 min-h-screen pt-12">Föreställningen hittades inte.</p>
 
   return (
-    <div className="bg-gray-900 text-white">
-    <main> 
-      <h1 className="font-bold">Boka biljett</h1>
-      <BookingForm show={show} onBookingComplete={handleBookingComplete} />
+    <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center py-12 px-4">
+      <div className="w-full max-w-md">
+        <h1 className="text-2xl font-bold text-yellow-500 mb-6 text-center">Boka biljett</h1>
+        <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
+          <BookingForm show={show} onBookingComplete={handleBookingComplete} />
+        </div>
+      </div>
     </main>
-    </div>
   )
 }

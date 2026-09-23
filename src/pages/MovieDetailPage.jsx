@@ -41,31 +41,35 @@ export default function MovieDetailPage() {
     getShows()
   }, [movieId])
 
-  if (isLoading) return <p>Laddar föreställningar...</p>
-  if (errorMessage) return <p style={{ color: "red" }}>{errorMessage}</p>
+  if (isLoading) return <p className="text-center text-white bg-gray-950 min-h-screen pt-12">Laddar föreställningar...</p>
+  if (errorMessage) return <p className="text-center text-red-500 bg-gray-950 min-h-screen pt-12">{errorMessage}</p>
 
   return (
-    <main className="bg-gray-950 text-white">
-      <p><Link to="/" className="text-blue-500 underline">Tillbaka till alla filmer</Link></p>
+    <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center py-12 px-4">
+      <div className="w-full max-w-md">
+        <p className="mb-6">
+          <Link to="/" className="text-blue-500 underline">Tillbaka till alla filmer</Link>
+        </p>
 
-      {movie && (
-        <div className="mb-6">
-          {movie.posterUrl && (
-            <img src={movie.posterUrl} alt={movie.title} className="w-48 rounded mb-3" />
-          )}
-          <h1 className="text-2xl font-bold">{movie.title}</h1>
-          <p className="text-gray-400">{movie.genre} | {movie.duration} min</p>
-          <p>{movie.description}</p>
-        </div>
-      )}
-
-      <h2 className="text-xl font-bold">Föreställningar</h2>
-      <div className="flex gap-4">
-        {shows.length > 0 ? (
-          shows.map(show => <ShowCard key={show._id} show={show} />)
-        ) : (
-          <p>Inga föreställningar hittades för den här filmen.</p>
+        {movie && (
+          <div className="mb-8 bg-gray-900 border border-gray-700 rounded-lg p-6 text-center">
+            {movie.posterUrl && (
+              <img src={movie.posterUrl} alt={movie.title} className="w-48 rounded mb-4 mx-auto" />
+            )}
+            <h1 className="text-2xl font-bold">{movie.title}</h1>
+            <p className="text-gray-400 mb-3">{movie.genre} | {movie.duration} min</p>
+            <p className="text-sm">{movie.description}</p>
+          </div>
         )}
+
+        <h2 className="text-xl font-bold text-yellow-500 mb-4 text-center">Föreställningar</h2>
+        <div className="flex flex-col gap-4">
+          {shows.length > 0 ? (
+            shows.map(show => <ShowCard key={show._id} show={show} />)
+          ) : (
+            <p className="text-center">Inga föreställningar hittades för den här filmen.</p>
+          )}
+        </div>
       </div>
     </main>
   )
