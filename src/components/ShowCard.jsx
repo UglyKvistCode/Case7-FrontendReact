@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
 
 export default function ShowCard({ show }) {
-  const startTime = new Date(show.startTime).toLocaleString("sv-SE")
+  const startTime = new Date(show.startTime).toLocaleString("sv-SE", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  })
 
   return (
     <div className="border rounded p-4">
