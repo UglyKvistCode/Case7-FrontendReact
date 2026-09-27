@@ -1,16 +1,42 @@
-# React + Vite
+# Bettys Hundbiograf
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Välkommen till stans bästa hundbiograf, en plats för hundar att umgås och se på film tillsammans. Pupcorn, filt och hundöl ingår i varje biljett.
 
-Currently, two official plugins are available:
+## Funktioner
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Trailer för kommande film.
+- Se aktuella filmer.
+- Boka biljett och välj liggplats.
+- Få bokningsbekräftelse.
 
-## React Compiler
+## Kom igång:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Klona repot:
+git clone https://github.com/UglyKvistCode/Case7-FrontendReact.git
 
-## Expanding the ESLint configuration
+Se till att du står i rätt mapp:
+cd Case7-FrontendReact
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Installera dependencies:
+npm install
+
+Starta utvecklingsservern:
+npm run dev
+
+Öppna länken som visas i terminalen (tex http://localhost:5173)
+
+## API
+
+Jag har använt mig av ett API vi fick av läraren: `https://cinema-api.henrybergstrom.com/api/v1`
+
+## Fonten
+
+Fonten till h1 kommer ifrån creativefabrica.com
+
+## Trailern
+
+Kommande film trailern har jag gjort själv och det är mina egna hundar Hanna och Geni som är skådisarna. Filmat med greenscreen, med fokus på positiv förstärkning och respekt för hundarnas gränser genom hela inspelningen.
+
+## Ai
+
+Ai har använts för att göra den röda gardinen och hjälp med att lägga in fonten på rätt ställe. Ai har även använts som stöd och svarat på frågor om jag gjort rätt när jag varit osäker.
