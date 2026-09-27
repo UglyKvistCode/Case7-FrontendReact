@@ -39,4 +39,4 @@ Kommande film trailern har jag gjort själv och det är mina egna hundar Hanna o
 
 ## Ai
 
-Ai har använts för att göra den röda gardinen och hjälp med att lägga in fonten på rätt ställe. Ai har även använts som stöd och svarat på frågor om jag gjort rätt när jag varit osäker.
+Ai har använts för att göra den röda gardinen och hjälp med att lägga in fonten på rätt ställe. Ai har även använts som stöd och svarat på frågor om jag gjort rätt när jag varit osäker. Använt ai för att göra faviconen, den föreställer Betty Bedlingtonterrier som äger biografen.
