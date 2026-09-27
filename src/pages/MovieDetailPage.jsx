@@ -48,7 +48,7 @@ export default function MovieDetailPage() {
     <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center py-12 px-4">
       <div className="w-full max-w-md">
         <p className="mb-6">
-          <Link to="/" className="text-blue-500 underline">Tillbaka till alla filmer</Link>
+          <Link to="/" className="text-yellow-500  no-underline">← Tillbaka till alla filmer</Link>
         </p>
 
         {movie && (

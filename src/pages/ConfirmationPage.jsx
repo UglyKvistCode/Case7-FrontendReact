@@ -6,7 +6,7 @@ export default function ConfirmationPage({ booking }) {
     return (
       <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center gap-4">
         <p>Ingen bokning att visa — har du redan bokat?</p>
-        <Link to="/" className="text-blue-500 underline">Tillbaka till alla filmer</Link>
+        <Link to="/" className="text-yellow-500 no-underline">← Tillbaka till alla filmer</Link>
       </main>
     )
   }
@@ -52,8 +52,8 @@ export default function ConfirmationPage({ booking }) {
         </div>
 
         <p className="mt-6 text-center">
-          <Link to="/" className="text-blue-500 underline">
-            Boka en till biljett
+          <Link to="/" className="text-yellow-500 no-underline">
+           ← Boka en till biljett
           </Link>
         </p>
       </div>
