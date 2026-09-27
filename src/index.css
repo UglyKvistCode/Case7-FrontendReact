@@ -1,1 +1,6 @@
+@font-face {
+    font-family: 'Faiel';
+    src: url('./fonts/Faiel.ttf') format('truetype');
+}
+
 @import "tailwindcss";

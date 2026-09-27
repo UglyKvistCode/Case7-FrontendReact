@@ -29,7 +29,8 @@ export default function HomePage() {
 
   return (
     <>
-<h1 className="text-4xl font-bold text-yellow-500 text-center py-6 bg-gray-950">
+<h1 className="text-4xl font-bold text-yellow-500 text-center py-6 bg-gray-950"
+style={{fontFamily:"'Faiel'"}}>
   Bettys HundBiograf
 </h1>
 
